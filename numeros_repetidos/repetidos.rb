@@ -2,5 +2,5 @@
 # de números pero sin elementos repetidos.
 
 def numeros_sin_repetir(array)
-  # Implementar solución
+  array.uniq
 end
