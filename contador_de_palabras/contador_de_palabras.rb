@@ -5,5 +5,5 @@
 # - "Sisa, cole!" debe retornar 2.
 
 def contador_de_palabras(cadena)
-  # Implementar solución
+  cadena.split(" ").length
 end
