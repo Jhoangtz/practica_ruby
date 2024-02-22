@@ -11,5 +11,15 @@
 # - "EIO" debe retornar 9.
 
 def puntaje(input)
-  # Implementar solución
+    valores = { "a" => 1, "e" => 2, "i" => 3, "o" => 4, "u" => 5 }
+
+    input.downcase!
+
+    valor_total = 0
+
+    input.each_char do |vocal|
+        valor_total += valores[vocal]
+    end
+
+    valor_total
 end
