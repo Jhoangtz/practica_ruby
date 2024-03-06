@@ -5,6 +5,18 @@
 # - "ya te digo" => true.
 # - "coleto" => false
 
-def isograma
-  # Implementar solución
+def isograma(frase)
+  frase = frase.downcase.gsub(" ", "")
+  
+  letras = {}
+  
+  frase.each_char do |letra|
+    if letras[letra]
+      return false
+    else
+      letras[letra] = true
+    end
+  end
+  
+  return true
 end
