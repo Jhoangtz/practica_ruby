@@ -5,6 +5,17 @@
 # - "Ay, cómo te vas a regalar así mi rey" => false
 # - "Cada vez que trabajo, Félix me paga con whisky añejo" => true.
 
-def pangrama
-  # Implementar solución
+def pangrama(frase)
+  frase.downcase!
+
+  letras = Hash.new(0)
+
+  frase.each_char do |caracteres| 
+    if ('a'..'z').include?(caracteres) || caracteres == 'ñ'
+      letras[caracteres] += 1
+    end
+  end
+
+  letras.keys.length == 27
 end
+
